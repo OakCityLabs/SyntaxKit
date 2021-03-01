@@ -10,13 +10,15 @@ let package = Package(
     ],
     products: [
         .library(
-            name: "SyntaxKit",
-            targets: ["SyntaxKit"]),
+            name: "SyntaxKit", targets: ["SyntaxKit"]),
     ],
     targets: [
         .target(
             name: "SyntaxKit",
             path: "SyntaxKit",
-            exclude: ["Tests"])
+            exclude: ["Tests"]),
+        .testTarget(
+            name: "SyntaxKit",
+            path: "SyntaxKit/Tests")
     ]
 )
